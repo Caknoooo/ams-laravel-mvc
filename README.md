@@ -554,3 +554,28 @@ Route::get('/product/{product}/edit', [ProductController::class, 'edit'])->name(
 Route::put('/product/{product}/update', [ProductController::class, 'update'])->name('product.update');
 Route::delete('/product/{product}/destroy', [ProductController::class, 'destroy'])->name('product.destroy');
 ```
+
+Lalu nyalakan ``XAMPP`` dan jalankan berikut 
+
+![image](https://github.com/Caknoooo/ams-laravel-restful-api/assets/92671053/0098acc5-0603-4b62-956d-dcb3d0570291)
+
+
+Setelah itu jalankan perintah berikut 
+```
+php artisan migrate
+php artisan key:generate
+php artisan config:clear
+php artisan config:cache
+php artisan serve
+```
+
+Hasilnya adalah sebagai berikut 
+
+![image](https://github.com/Caknoooo/ams-laravel-restful-api/assets/92671053/c2574f9b-7d00-4476-9ced-3cdb32f8642b)
+
+Jika ``teman-teman`` mencoba untuk membuka endpoint berikut ``http://127.0.0.1:8000/product/create`` maka hasilnya akan sebagai berikut 
+
+![image](https://github.com/Caknoooo/ams-laravel-mvc/assets/92671053/5a1a08c7-dfe7-40a5-bb1a-96b4dcc42943)
+
+
+Teman-teman bisa juga untuk mencoba beberapa endpoint yang telah disediakan pada file ``routes/web.php``
